@@ -10,7 +10,6 @@ function changeSpanBackground() {
             color = null
 
             if (text.includes('deploy v2')) {
-                console.log(span.textContent)
                 color = '#ffd6d6'
             } else if (text.includes('migration v2')) {
                 color = '#fff3d6'
@@ -18,8 +17,7 @@ function changeSpanBackground() {
 
             if (color != null) {
                 const parentDiv = span.closest('.Box-row, .js-socket-channel, .js-updatable-content');
-                console.log(parentDiv)
-                if (parentDiv) {
+                if (parentDiv) {span
                     parentDiv.style.backgroundColor = color;
                 }
             }
@@ -28,3 +26,7 @@ function changeSpanBackground() {
 }
 
 changeSpanBackground();
+
+chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+    alert('updated from contentscript');
+ });
