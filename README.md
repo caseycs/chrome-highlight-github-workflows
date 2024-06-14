@@ -2,7 +2,7 @@
 
 ## Howto install
 
-* Download [latest release](https://github.com/caseycs/chrome-highlight-github-workflows/releases/tag/v0.0.1)
+* Download [latest release](https://github.com/caseycs/chrome-highlight-github-workflows/releases/download/v0.0.1/extension.zip)
 * Unpack the archive
 * Open [Chrome extensio](chrome://extensions/)
 * Turn on `Developer mode`
