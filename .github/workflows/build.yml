@@ -28,14 +28,6 @@ jobs:
       run: |
         mkdir -p build
         zip -r build/extension.zip . -x '*.git*' -x '*.github*' -x 'node_modules/*'
-      
-    - name: Publish to GitHub Packages
-      run: |
-        mv chrome-extension/extension.zip chrome-extension.zip
-        echo "name=chrome-extension" >> $GITHUB_ENV
-        echo "version=0.0.1" >> $GITHUB_ENV
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Create GitHub Release
       id: create_release
